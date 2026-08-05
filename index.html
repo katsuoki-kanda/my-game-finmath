@@ -55,7 +55,7 @@
 
         #status-text {
             position: absolute;
-            top: 230px; /* ボタン追加に合わせて位置を調整 */
+            top: 90px; /* ボタン追加に合わせて位置を調整 */
             left: 0;
             font-size: 40px; 
             color: #0f0; 
@@ -296,7 +296,7 @@
                 gameStarted = false;
                 mainQ.textContent = "終了";
                 speak(`${score}点です。終了。`);
-                statusText.textContent = "Enterキーでリスタート";
+                statusText.textContent = "片手をあげるとリスタート！";
             }
 
             const isCorrectSum = (totalFingers === currentAns);
@@ -317,7 +317,7 @@
                 }, 700);
             }
         } else if (timeLeft > 0) {
-            statusText.textContent = "片手を高く挙げるとスタート！";
+            statusText.textContent = "片手をあげるとスタート！";
             mainQ.textContent = ""; 
         }
         canvasCtx.restore();
